@@ -16,7 +16,7 @@ RSpec.configure do |config|
 
   VCR.configure do |c|
     c.cassette_library_dir = 'spec/fixtures/vcr'
-    c.hook_into :excon, :webmock
+    c.hook_into :webmock
     c.configure_rspec_metadata!
     #c.before_http_request do |request, response|
       #request.uri.gsub!(/%2F\d+%2Ffarnsworth.jpg/, '%2F___ID___%2Ffarnsworth.jpg')
